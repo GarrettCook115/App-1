@@ -33,8 +33,11 @@ def run_command():
     cmd = command_map.get(command, None)
     if not cmd:
         return "Invalid command selected!"
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     
-    output = execute_command(cmd)
+    print(f"Executing command: {cmd}")  # Debugging
+    print(f"Command Output:\n{result.stdout}")  # Debugging
+    
     return f"<pre>{output}</pre>"
 
 if __name__ == "__main__":
