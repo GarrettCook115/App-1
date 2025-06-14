@@ -1,4 +1,0 @@
-requirements:
-Flask
-gunicorn
-
