@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import subprocess
 import sys
 
+    
 # Ensure Windows execution
 if sys.platform != "win32":
     print("This application only functions on a Windows System")
@@ -38,3 +39,7 @@ def run_command():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
