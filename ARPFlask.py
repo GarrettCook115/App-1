@@ -6,7 +6,7 @@ import sys
 # Ensure Windows execution
 if sys.platform != "win32":
     print("This application only functions on a Windows System")
-    sys.exit()
+    
 
 app = Flask(__name__)
 
