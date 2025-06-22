@@ -7,15 +7,15 @@ app = Flask(__name__)
 # Command Execution
 if sys.platform =="win32":
     command_map={
-        "ipconfig": "hostname -I ",
-        "arp": "ip neigh",
-        "nslookup": "dig google.com"
+        "ipconfig": "ipconfig /all ",
+        "arp": "arp -a",
+        "nslookup": "nslookup google.com"
     }
 else:
     command_map = {
         "ipconfig": "ip a",
         "arp": "arp -a",
-        "nslookup": "nslookup google.com"
+        "nslookup": "dig google.com"
         
     }
 
