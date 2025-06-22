@@ -13,7 +13,7 @@ if sys.platform =="win32":
     }
 else:
     command_map = {
-        "ifconfig": "ifconfig",
+        "ipconfig": "ip a",
         "arp": "arp -a",
         "nslookup": "nslookup google.com"
         
