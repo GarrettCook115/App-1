@@ -29,13 +29,18 @@ def index():
 
 @app.route("/run_command", methods=["POST"])
 def run_command():
-    command = request.form["command"].lower()
+    command = request.form.get("command","").lower()
     cmd = command_map.get(command)
+
     if not cmd:
-        return "Invalid command selected!"
+        return "Invalid command selected!", 400
     
-    output = execute_command(cmd)
-    return f"<pre>{output}</pre>"
+    try:
+        output = execute_command(cmd)
+        return f"<pre>{output}</pre>"
+    
+    except Exception as e:
+        return f"<pre>Command Execution failed: {str(e)}</pre>", 500
 
 if __name__=="__main__":
     if sys.platform =="win32":
