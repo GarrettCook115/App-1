@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,5 +16,23 @@
         <button type ="submit">Run Command</button>
     </form>
     
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Command Executor</title>
+</head>
+<body>
+    <h2>Select a Command</h2>
+    <form method="POST" action="/run_command">
+        <select name="command">
+            <option value="ipconfig">IP Config</option>
+            <option value="arp">ARP Table</option>
+            <option value="nslookup">NSLookup</option>
+        </select>
+        <button type="submit">Run</button>
+    </form>
 </body>
 </html>
