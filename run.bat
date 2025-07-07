@@ -1,4 +1,4 @@
 @echo off
 echo Starting Flask App...
-python ARPFlask.py
+python app.py
 pause
