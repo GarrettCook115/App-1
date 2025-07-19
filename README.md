@@ -1,5 +1,5 @@
 Simplistic Windows Command Project that executes selective Windows CMDs depending on the selection.
-Only works on the Windows platform OS. Windows x32/x84 and x64.
+Only works on the Windows platform OS. Windows x32/x86 and x64.
 
 
 Steps:
