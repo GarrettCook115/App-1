@@ -15,13 +15,16 @@ if sys.platform =="win32":
     command_map={
         "ipconfig": "ipconfig /all ",
         "arp": "arp -a",
-        "nslookup": "nslookup google.com"
+        "nslookup": "nslookup google.com",
+        "netstat": "Netstat"
+        
     }
 else:
     command_map = {
         "ipconfig": "ip a",
         "arp": "arp -a",
         "nslookup": "dig google.com"
+
         
     }
 
