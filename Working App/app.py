@@ -52,10 +52,13 @@ def run_command():
     except Exception as e:
         return f"<pre>Command Execution failed: {str(e)}</pre>", 500
 
+from waitress import serve
+
 if __name__=="__main__":
-    if sys.platform =="win32":
-        webbrowser.open("http://127.001:5000")
-        app.run(debug=True)
+    # Uncomment below for Windows-specific behavior
+    # if sys.platform =="win32":
+    #     webbrowser.open("http://127.0.0.1:5000")
+    #     app.run(debug=True)
     # else:
-    #     from waitress import serve
-    #     serve(app, host="0.0.0.0", port=8080)
+
+    serve(app, host="0.0.0.0", port=8080)
