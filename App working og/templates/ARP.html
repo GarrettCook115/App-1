@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Prompt Execution</title>
+</head>
+<body>
+    <h2>Windows Commands</h2>
+    <form action="/run_command" method="POST">
+        <select name="command">
+            <option value ="ipconfig"> IP Config</option>
+            <option value ="nslookup"> Ns Lookup</option>
+            <option value ="arp"> ARP </option>
+        </select>
+        <button type ="submit">Run Command</button>
+    </form>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Command Executor</title>
+</head>
+<body>
+    <h2>Select a Command</h2>
+    <form method="POST" action="/run_command">
+        <label for ="command">Choose a Command:</label>
+        <select name="command" id ="command">
+              {% for cmd in commands %}
+                <option value="{{ cmd }}">{{ cmd.capitalize() }}</option>
+            {% endfor %}
+            <!-- <option value="ipconfig">IP Config</option>
+            <option value="arp">ARP Table</option>
+            <option value="nslookup">NSLookup</option>
+            <option value ="netstat">Netstat</option> -->
+        </select>
+        <br></br>
+        <button type="submit">Run</button>
+    </form>
+</body>
+</html>
