@@ -16,7 +16,7 @@ if sys.platform =="win32":
         "ipconfig": "ipconfig /all ",
         "arp": "arp -a",
         "nslookup": "nslookup google.com",
-        "netstat": "Netstat"
+        "netstat": "netstat"
         
     }
 else:
