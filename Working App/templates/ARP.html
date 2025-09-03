@@ -29,10 +29,13 @@
     <form method="POST" action="/run_command">
         <label for ="command">Choose a Command:</label>
         <select name="command" id ="command">
-            <option value="ipconfig">IP Config</option>
+              {% for cmd in commands %}
+                <option value="{{ cmd }}">{{ cmd.capitalize() }}</option>
+            {% endfor %}
+            <!-- <option value="ipconfig">IP Config</option>
             <option value="arp">ARP Table</option>
             <option value="nslookup">NSLookup</option>
-            <option value ="netstat">Netstat</option>
+            <option value ="netstat">Netstat</option> -->
         </select>
         <br></br>
         <button type="submit">Run</button>

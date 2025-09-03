@@ -35,7 +35,7 @@ def execute_command(cmd):
 
 @app.route("/")
 def index():
-    return render_template("ARP.html")
+    return render_template("ARP.html", commands=command_map.keys())
 
 @app.route("/run_command", methods=["POST"])
 def run_command():
