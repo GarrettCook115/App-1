@@ -1,7 +1,8 @@
 Simplistic Windows Command Project that executes selective Windows CMDs depending on the selection.
 Only works on the Windows platform OS. Windows x32/x86 and x64.
 
-
+**Head Over to the new Repo :https://github.com/GarrettCook115/App1-Private-/blob/main/app.py
+Has updated code and corrected ports for execution for all python and html apps. **
 Steps:
 1. Run the app.py command
 2. Click the http Loopback IP on port 5000 (It will show it once you execute/run)
