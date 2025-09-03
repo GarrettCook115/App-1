@@ -43,14 +43,22 @@ def run_command():
     cmd = command_map.get(command)
 
     if not cmd:
-        return "Invalid command selected!", 400
-    
+        return render_template("result.html", output="Invalid command selected!")
+
     try:
         output = execute_command(cmd)
-        return f"<pre>{output}</pre>"
-    
+        return render_template("result.html", output=output)
     except Exception as e:
-        return f"<pre>Command Execution failed: {str(e)}</pre>", 500
+        return render_template("result.html", output=f"Command Execution failed: {str(e)}")
+    # if not cmd:
+    #     return "Invalid command selected!", 400
+    
+    # try:
+    #     output = execute_command(cmd)
+    #     return f"<pre>{output}</pre>"
+    
+    # except Exception as e:
+    #     return f"<pre>Command Execution failed: {str(e)}</pre>", 500
 
 from waitress import serve
 
