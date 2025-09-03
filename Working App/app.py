@@ -23,7 +23,8 @@ else:
     command_map = {
         "ipconfig": "ip a",
         "arp": "arp -a",
-        "nslookup": "dig google.com"
+        "nslookup": "dig google.com",
+        "netstat": "netstat"
 
         
     }
