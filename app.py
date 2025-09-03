@@ -37,10 +37,16 @@ def execute_command(cmd):
 def index():
     return render_template("ARP.html", commands=list(command_map.keys()))
 
+
+import logging
+logging.basicConfig(level=logging.INFO)
+
 @app.route("/run_command", methods=["POST"])
 def run_command():
     command = request.form.get("command","").lower()
-    cmd = command_map.get(command)
+    logging.info(f"Received command: {command}")
+
+    cmd =command_map.get(command)
 
     if not cmd:
         return render_template("result.html", output="Invalid command selected!")
