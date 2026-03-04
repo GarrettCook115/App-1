@@ -12,4 +12,4 @@ Steps:
 <img width="1150" height="522" alt="Screenshot 2025-07-19 081246" src="https://github.com/user-attachments/assets/feeece0f-f5d1-4287-ad5c-cbc09d90e7f4" />
 <img width="4" height="1" alt="Screenshot 2025-07-19 081232" src="https://github.com/user-attachments/assets/c75e7583-89b3-46d5-bdcf-6472643cf142" />
 <img width="2548" height="1092" alt="Screenshot 2025-07-19 081220" src="https://github.com/user-attachments/assets/1c57ae83-0730-4331-be04-232793ec1402" />
-<img width="800" alt="Screenshot" src="https://raw.githubusercontent.com/GarrettCook115/WebSite-Command-Prompt-Execution-APPS/main/Screenshot%202026-03-03%20225832.png"/>
+
